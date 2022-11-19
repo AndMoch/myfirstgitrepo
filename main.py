@@ -50,7 +50,8 @@ class Example(QMainWindow, Ui_MainWindow):
         self.repaint()
 
     def draw_flag(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
+        red, green, blue = rnd.randint(0, 255), rnd.randint(0, 255), rnd.randint(0, 255)
+        qp.setBrush(QColor(red, green, blue))
         radius = rnd.randint(1, 200)
         qp.drawEllipse(self.circle_center, radius, radius)
 
